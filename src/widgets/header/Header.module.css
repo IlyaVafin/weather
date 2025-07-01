@@ -1,0 +1,24 @@
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1392px;
+	margin: 0 auto;
+	margin-top: 28px;
+}
+.headerCity {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.headerButtons {
+	display: flex;
+	align-items: center;
+	gap: 14px
+}
+
+.toggleThemeUserAvatar {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}

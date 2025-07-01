@@ -1,0 +1,30 @@
+.toggleThemeButton {
+  width: 115px;
+  height: 46px;
+  border: 1px solid #626161;
+  background: #19191b;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggleThemeButton span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #d8e9f9;
+  transition: left 0.7s ease;   
+}
+
+.darkMode {
+  left: 72px;
+}
+
+.lightMode {
+  left: 0;
+}
