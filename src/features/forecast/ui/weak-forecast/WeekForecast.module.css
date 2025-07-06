@@ -1,0 +1,50 @@
+.WeekForcast {
+  display: flex;
+  gap: 39px;
+  max-width: 1392px;
+  margin: 0 auto;
+}
+.weatherList {
+  display: flex;
+  gap: 39px;
+}
+
+.weatherList li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fdfdfd;
+  background: #1b1b1d;
+  border-radius: 30px;
+  width: 96px;
+  height: 226px;
+	padding-bottom: 29px;
+}
+
+.weatherListDay {
+  font-weight: 600;
+  font-size: 16px;
+  color: #e5e5e5;
+  border-bottom: 1px solid #39393a;
+	width: 100%;
+	text-align: center;
+	margin-top: 12px;
+	padding-bottom: 13px;
+}
+
+.weatherListTemp {
+  font-weight: 600;
+  font-size: 32px;
+  color: #fdfdfd;
+	text-align: center;
+}
+
+.loading {
+  color: #fdfdfd;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}

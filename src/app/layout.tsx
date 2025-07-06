@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@/features/theme-toggle/model/ThemeProvider';
 import type { Metadata } from 'next';
 import './globals.css';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Montserrat} from 'next/font/google'
 import { ClientProvider } from '@/shared/context/ClientProvider';
 import { CityProvider } from '@/shared/context/CitySearchContext';
 
@@ -10,13 +10,17 @@ export const metadata: Metadata = {
   description: 'The new weather app with all functions',
 };
 
+const montserrat = Montserrat({
+  subsets: ['latin']
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <ClientProvider>
         <ThemeProvider>
           <CityProvider>

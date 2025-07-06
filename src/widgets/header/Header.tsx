@@ -1,4 +1,3 @@
-
 import { HeaderButton } from '@/shared/ui/HeaderButton';
 import Image from 'next/image';
 import s from './Header.module.css';

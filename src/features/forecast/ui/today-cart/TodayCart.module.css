@@ -1,0 +1,121 @@
+.todayWeatherCard {
+  max-width: 280px;
+  width: 100%;
+  background: #bbd7ec;
+  height: 226px;
+  border-radius: 25px;
+}
+
+.todayCartTop {
+  padding: 18px 14px;
+  background: #aecadf;
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  border-radius: 25px 25px 0 0;
+  margin-bottom: 12px;
+}
+
+.todayCartTop p {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f0f11;
+}
+
+.todayCartTop span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f0f11;
+}
+
+.Degree {
+  display: flex;
+  justify-content: space-between;
+  max-width: 229px;
+  margin: 0 auto;
+}
+
+.Degree p {
+  font-weight: 600;
+  font-size: 36px;
+  color: #0f0f11;
+}
+
+.weatherDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weatherDetails ul li {
+  font-size: 14px;
+  color: #4f5658;
+}
+
+.mainDetails {
+  margin-left: 16px;
+}
+
+.sunriseSunset {
+  margin-right: 8px;
+}
+
+.value {
+  font-weight: 600;
+  color: #0f0f11;
+}
+
+.forecastCategories {
+  display: flex;
+  gap: 15px;
+}
+.forecastTop {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1253px;
+  margin: 30px 0;
+  margin-left: 24px;
+}
+.forecastCategories li button {
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.forecastAir {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.forecastAirBtns {
+  background: #1e1e1e;
+  border-radius: 15px;
+}
+
+.activeBtn {
+  background: #bbd7ec;
+  color: #1e1e1e;
+}
+
+.inactiveBtn {
+  background: none;
+  color: #818085;
+}
+
+.forecastAir button {
+  border: none;
+  border-radius: 15px;
+  width: 81px;
+  height: 30px;
+  transition: background 0.3s ease;
+}
+
+.chanceOfRainTitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
