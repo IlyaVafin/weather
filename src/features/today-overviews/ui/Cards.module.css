@@ -1,0 +1,97 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 295px);
+  row-gap: 30px;
+  column-gap: 40px;
+  margin-left: 24px;
+}
+
+.overviewCard {
+  background: #1b1b1d;
+  color: #fff;
+  border-radius: 15px;
+  max-width: 290px;
+  width: 100%;
+  max-height: 245px;
+  height: 100%;
+  padding: 26px 14px;
+}
+
+.cardValues {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+
+.graphic {
+  margin-top: 20px;
+  pointer-events: none;
+}
+.pie {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pressureValue {
+  margin-top: 10px;
+}
+
+.devPoint {
+  display: flex;
+  gap: 35px;
+  margin-top: 24px;
+}
+
+.devPoint span {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.humidityIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devPointValues {
+  display: flex;
+  gap: 5px;
+}
+
+.devPointValues p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #818085;
+}
+
+.visibilityImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visibilityValues {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.visibilityValues p {
+  width: 60px;
+}
+
+.visibilityText {
+  display: flex;
+  width: 145px;
+}
+
+.visibilityText p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #818085;
+  width: 125px;
+}

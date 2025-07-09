@@ -1,8 +1,6 @@
-'use client';
-import { ITodayWeather } from '@/shared/types/types';
 import Image from 'next/image';
 import { getWeekDay } from '../../model/getWeekDay';
-import { useGetTime } from '../../model/useGetTime';
+import { useGetTime } from '../../../../shared/hooks/useGetTime';
 import s from './TodayCart.module.css';
 import { MainDetails } from './MainDetails';
 import { SunriseSunset } from './SunriseSunset';

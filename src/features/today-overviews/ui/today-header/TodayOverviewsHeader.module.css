@@ -1,0 +1,24 @@
+.todayHeader {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  max-width: 1392px;
+  margin: 30px auto;
+}
+
+.headerTitle {
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+.otherText{
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
+.otherCities {
+  display: flex;
+  gap: 153px;
+}

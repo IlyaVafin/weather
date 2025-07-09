@@ -3,7 +3,6 @@ import Image from 'next/image';
 import s from '../Header.module.css';
 import { useTheme } from '@/shared/hooks/useTheme';
 import { useCityContext } from '@/shared/hooks/useCityContext';
-import { useGetTodayWeather } from '@/shared/hooks/useGetTodayWeather';
 export const HeaderCity = () => {
   const { theme } = useTheme();
   const {city} = useCityContext()
