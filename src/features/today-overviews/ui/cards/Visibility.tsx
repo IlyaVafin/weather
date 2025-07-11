@@ -1,6 +1,6 @@
 import { ITodayWeather } from '@/shared/types/types';
 import Image from 'next/image';
-import s from '../Cards.module.css';
+import s from './Cards.module.css';
 export const Visibility = ({ data }: { data: ITodayWeather }) => {
   const visibility = (data.visibility / 1000).toFixed(0);
   return (

@@ -1,9 +1,9 @@
 import { ITodayWeather } from '@/shared/types/types';
 import s from './Cards.module.css';
-import { Humidity } from './cards/Humidity';
-import { Pressure } from './cards/Pressure';
-import { Visibility } from './cards/Visibility';
-import { WindStatus } from './cards/WindStatus';
+import { Humidity } from './Humidity';
+import { Pressure } from './Pressure';
+import { Visibility } from './Visibility';
+import { WindStatus } from './WindStatus';
 export const Cards = ({ data }: { data: ITodayWeather }) => {
   return (
     <>

@@ -4,11 +4,11 @@ import TodayCart from '../today-cart/TodayCart';
 import { getWeekDay } from '../../model/getWeekDay';
 import Image from 'next/image';
 import { getWeather } from '../../model/getWeather';
-import s from './WeekForecast.module.css'
+import s from './WeekForecast.module.css';
 export const WeekForcast = () => {
   const { city } = useCityContext();
-  const { data } = useGetWeekForecast(city);
-  if (!data) return <div className={s.loading}>Loading...</div>;
+  const { data } = useGetWeekForecast(city);  
+  if (!data) return;
   const dailyForecast = data.list.filter((item) => {
     return item.dt_txt.includes('12:00:00');
   });
@@ -20,10 +20,10 @@ export const WeekForcast = () => {
           {dailyForecast.slice(1).map((item) => (
             <li key={item.dt_txt}>
               <p className={s.weatherListDay}>{getWeekDay(undefined, item.dt)}</p>
-              <Image width={50} height={50} src={getWeather(item.weather[0].main)} alt=''/>
+              <Image width={50} height={50} src={getWeather(item.weather[0].main)} alt="" />
               <p className={s.weatherListTemp}>{Math.floor(item.main.temp)}°</p>
             </li>
-          ))} 
+          ))}
         </ul>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { ITodayWeather } from '@/shared/types/types';
 import { memo, useMemo } from 'react';
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { generateWaveBars } from '../../model/generateWaveBars';
-import s from '../Cards.module.css';
+import s from './Cards.module.css';
 export const WindStatus = memo(({ data }: { data: ITodayWeather }) => {
 
   const speed = data.wind.speed;

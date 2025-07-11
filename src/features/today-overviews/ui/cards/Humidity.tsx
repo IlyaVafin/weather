@@ -2,7 +2,7 @@ import { ITodayWeather } from '@/shared/types/types';
 import Image from 'next/image';
 import { memo } from 'react';
 import { calculateDevPoint } from '../../model/calculateDevPoint';
-import s from '../Cards.module.css';
+import s from './Cards.module.css';
 export const Humidity = memo(({ data }: { data: ITodayWeather }) => {
   const humidity = data.main.humidity;
   return (
