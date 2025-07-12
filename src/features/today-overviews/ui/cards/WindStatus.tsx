@@ -4,7 +4,7 @@ import { memo, useMemo } from 'react';
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { generateWaveBars } from '../../model/generateWaveBars';
 import s from './Cards.module.css';
- const WindStatusComponent = ({ data }: { data: ITodayWeather }) => {
+const WindStatusComponent = ({ data }: { data: ITodayWeather }) => {
   const speed = data.wind.speed;
   const windSpeed = useMemo(() => {
     return generateWaveBars(speed);
@@ -39,5 +39,5 @@ import s from './Cards.module.css';
   );
 };
 
-export const WindStatus = memo(WindStatusComponent)
-WindStatus.displayName = 'WindStatus'
+export const WindStatus = memo(WindStatusComponent);
+WindStatus.displayName = 'WindStatus';

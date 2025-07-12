@@ -3,7 +3,7 @@ import s from './Cards.module.css';
 import { PieChart, Pie } from 'recharts';
 import { memo, useMemo } from 'react';
 const maxPressure = 1200;
- const PressureComponent = ({ data }: { data: ITodayWeather }) => {
+const PressureComponent = ({ data }: { data: ITodayWeather }) => {
   const pressure = useMemo(() => {
     return [
       {
@@ -46,5 +46,5 @@ const maxPressure = 1200;
   );
 };
 
-export const Pressure = memo(PressureComponent)
-Pressure.displayName = 'Pressure'
+export const Pressure = memo(PressureComponent);
+Pressure.displayName = 'Pressure';

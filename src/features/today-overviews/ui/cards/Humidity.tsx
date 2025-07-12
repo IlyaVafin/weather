@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { calculateDevPoint } from '../../model/calculateDevPoint';
 import s from './Cards.module.css';
 import { memo } from 'react';
-const HumidityComponent =  ({ data }: { data: ITodayWeather }) => {
+const HumidityComponent = ({ data }: { data: ITodayWeather }) => {
   const humidity = data.main.humidity;
   return (
     <div className={s.overviewCard}>
@@ -22,5 +22,5 @@ const HumidityComponent =  ({ data }: { data: ITodayWeather }) => {
   );
 };
 
-export const Humidity = memo(HumidityComponent)
-Humidity.displayName = 'Humidity'
+export const Humidity = memo(HumidityComponent);
+Humidity.displayName = 'Humidity';
