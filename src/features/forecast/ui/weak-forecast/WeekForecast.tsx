@@ -1,11 +1,12 @@
 import { useCityContext } from '@/shared/hooks/useCityContext';
 import { useGetWeekForecast } from '@/shared/hooks/useGetWeekForecast';
 import Image from 'next/image';
-import { useGetWeather } from '../../../../shared/hooks/useGetWeather';
+
 import { getWeekDay } from '../../model/getWeekDay';
 import TodayCart from '../today-cart/TodayCart';
 import s from './WeekForecast.module.css';
 import { Loader } from '@/features/loader/ui/Loader';
+import { getWeather } from '@/shared/hooks/getWeather';
 export const WeekForcast = () => {
   const { city } = useCityContext();
   const { data, isLoading, isError } = useGetWeekForecast(city);
@@ -26,7 +27,7 @@ export const WeekForcast = () => {
             dailyForecast.slice(1).map((item) => (
               <li key={item.dt_txt}>
                 <p className={s.weatherListDay}>{getWeekDay(undefined, item.dt)}</p>
-                <Image width={50} height={50} src={useGetWeather(item.weather[0].main)} alt="" />
+                <Image width={50} height={50} src={getWeather(item.weather[0].main)} alt="" />
                 <p className={s.weatherListTemp}>{Math.floor(item.main.temp)}°</p>
               </li>
             ))}
