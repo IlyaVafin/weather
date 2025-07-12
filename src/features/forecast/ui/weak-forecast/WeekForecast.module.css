@@ -5,7 +5,6 @@
   margin: 0 auto;
 }
 
-
 .weatherList {
   display: flex;
   gap: 39px;
@@ -21,7 +20,7 @@
   border-radius: 30px;
   width: 96px;
   height: 226px;
-	padding-bottom: 29px;
+  padding-bottom: 29px;
 }
 
 .weatherListDay {
@@ -29,17 +28,17 @@
   font-size: 16px;
   color: #e5e5e5;
   border-bottom: 1px solid #39393a;
-	width: 100%;
-	text-align: center;
-	margin-top: 12px;
-	padding-bottom: 13px;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  padding-bottom: 13px;
 }
 
 .weatherListTemp {
   font-weight: 600;
   font-size: 32px;
   color: #fdfdfd;
-	text-align: center;
+  text-align: center;
 }
 
 .loading {

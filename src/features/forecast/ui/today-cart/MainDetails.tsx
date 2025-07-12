@@ -1,7 +1,7 @@
 import { ITodayWeather } from '@/shared/types/types';
 import { getWindDirections } from '../../model/getWindDirections';
-import s from './TodayCart.module.css'
-export const MainDetails = ({data}: {data: ITodayWeather}) => {
+import s from './TodayCart.module.css';
+export const MainDetails = ({ data }: { data: ITodayWeather }) => {
   return (
     <ul className={s.mainDetails}>
       <li>

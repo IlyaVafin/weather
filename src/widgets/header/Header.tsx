@@ -16,13 +16,13 @@ const Header = () => {
           <HeaderButton>
             <Image width={24} height={24} src="/bell.svg" alt="bell-svg" />
           </HeaderButton>
-         <HeaderCity/>
+          <HeaderCity />
         </div>
-          <Input/>
-          <div className={s.toggleThemeUserAvatar}>
-            <Button/>
-            <Image src='/user-avatar.svg' alt='user-avatar' width={40} height={40}/>
-          </div>
+        <Input />
+        <div className={s.toggleThemeUserAvatar}>
+          <Button />
+          <Image src="/user-avatar.svg" alt="user-avatar" width={40} height={40} />
+        </div>
       </nav>
     </header>
   );

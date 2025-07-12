@@ -5,7 +5,6 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { generateWaveBars } from '../../model/generateWaveBars';
 import s from './Cards.module.css';
 export const WindStatus = memo(({ data }: { data: ITodayWeather }) => {
-
   const speed = data.wind.speed;
   const windSpeed = useMemo(() => {
     return generateWaveBars(speed);
@@ -38,4 +37,4 @@ export const WindStatus = memo(({ data }: { data: ITodayWeather }) => {
       </div>
     </div>
   );
-})
+});

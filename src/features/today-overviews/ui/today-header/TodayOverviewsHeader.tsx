@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import s from './TodayOverviewsHeader.module.css'
+import s from './TodayOverviewsHeader.module.css';
 export const TodayOverviewsHeader = () => {
   return (
     <div className={s.todayHeader}>

@@ -16,7 +16,7 @@ export default function TodayCart() {
 
   const weather = useGetWeather(data.weather[0].main);
   return (
-    <section className={s.forecast}>  
+    <section className={s.forecast}>
       <div className={s.todayWeatherCard}>
         <div className={s.todayCartTop}>
           <p>{getWeekDay(currentTime.getDay())}</p>

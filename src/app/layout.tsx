@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@/features/theme-toggle/model/ThemeProvider';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Montserrat} from 'next/font/google'
+import { Montserrat } from 'next/font/google';
 import { ClientProvider } from '@/shared/context/ClientProvider';
 import { CityProvider } from '@/shared/context/CitySearchContext';
 
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const montserrat = Montserrat({
-  subsets: ['latin']
-})
+  subsets: ['latin'],
+});
 
-const defaultCity = 'Moscow'
+const defaultCity = 'Moscow';
 
 export default function RootLayout({
   children,

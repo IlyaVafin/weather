@@ -5,14 +5,14 @@ import { KeyboardEvent, useState } from 'react';
 import { useCityContext } from '@/shared/hooks/useCityContext';
 export const Input = () => {
   const [value, setValue] = useState('');
-  const {searchCity} = useCityContext()
-  
+  const { searchCity } = useCityContext();
+
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if(e.key === 'Enter' && value.length > 0) searchCity(value);
-  }
+    if (e.key === 'Enter' && value.length > 0) searchCity(value);
+  };
   const handleButtonClick = () => {
     value.length > 0 ? searchCity(value) : null;
-  }
+  };
   return (
     <div className={s.searchInputWrapper}>
       <button onClick={handleButtonClick}>

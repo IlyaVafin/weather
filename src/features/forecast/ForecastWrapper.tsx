@@ -6,13 +6,13 @@ import ForecastTop from './ui/forecast-top/ForecastTop';
 import { TodayOverviews } from '../today-overviews/TodayOverviews';
 
 export const ForecastWrapper = () => {
-	const [category, setCategory] = useState('Next 4 days');
-	return (
-		<>
-			<ForecastTop category={category} setCategory={setCategory} />
-			{category === 'Today' && <TodayCart/>}
-			{category === 'Next 4 days' && <WeekForcast />}
-			<TodayOverviews/>
-		</>
-	);
+  const [category, setCategory] = useState('Next 4 days');
+  return (
+    <>
+      <ForecastTop category={category} setCategory={setCategory} />
+      {category === 'Today' && <TodayCart />}
+      {category === 'Next 4 days' && <WeekForcast />}
+      <TodayOverviews />
+    </>
+  );
 };
