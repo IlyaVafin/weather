@@ -5,10 +5,12 @@ import { useGetWeather } from '../../../../shared/hooks/useGetWeather';
 import { getWeekDay } from '../../model/getWeekDay';
 import TodayCart from '../today-cart/TodayCart';
 import s from './WeekForecast.module.css';
+import { Loader } from '@/features/loader/ui/Loader';
 export const WeekForcast = () => {
   const { city } = useCityContext();
   const { data, isLoading, isError } = useGetWeekForecast(city);
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader />;
+
   if (isError) return <p>City not found</p>;
   if (!data) return;
   const dailyForecast =
@@ -20,7 +22,7 @@ export const WeekForcast = () => {
       <TodayCart />
       <div>
         <ul className={s.weatherList}>
-          { !!dailyForecast &&
+          {!!dailyForecast &&
             dailyForecast.slice(1).map((item) => (
               <li key={item.dt_txt}>
                 <p className={s.weatherListDay}>{getWeekDay(undefined, item.dt)}</p>

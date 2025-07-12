@@ -4,6 +4,8 @@
   max-width: 1392px;
   margin: 0 auto;
 }
+
+
 .weatherList {
   display: flex;
   gap: 39px;
@@ -42,9 +44,4 @@
 
 .loading {
   color: #fdfdfd;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 50%;
-  transform: translateX(-50%);
 }

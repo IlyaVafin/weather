@@ -7,14 +7,28 @@ import { OtherCities } from '../other-cities/OtherCities';
 
 export const TodayOverviews = () => {
   const { city } = useCityContext();
-  const { data, isError, isLoading } = useGetTodayWeather(city);
+  const { data, isError } = useGetTodayWeather(city);
   if (isError) return <p>City not found</p>;
-  if (isLoading) return <p>Loading...</p>;
+  if (!data) return;
   return (
     <>
       <TodayOverviewsHeader />
       <div style={{ display: 'flex', gap: '37px' }}>
-        {data ? <Cards data={data} /> : <div>lol</div>}
+        {data.cod == 200 ? (
+          <Cards data={data} />
+        ) : (
+          <div
+            style={{
+              maxWidth: '620px',
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <span>City not found</span>
+          </div>
+        )}
         <ExploreWind />
         <OtherCities />
       </div>

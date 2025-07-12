@@ -12,7 +12,7 @@ export interface ITodayWeather {
   timezone: number;
   id: number;
   name: string;
-  cod: number;
+  cod: number | string;
   dt_txt: string;
 }
 
