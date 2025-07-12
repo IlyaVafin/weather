@@ -1,8 +1,14 @@
-import { useGetTodayWeather } from '@/shared/hooks/useGetTodayWeather';
+import { useQueries } from '@tanstack/react-query';
+import { getTodayWeather } from '@/shared/api/todayForecast';
 
 export const useGetMultipleTodayWeather = (cities: string[]) => {
-  return cities.map((city) => ({
-    city,
-    ...useGetTodayWeather(city),
-  }));
+  const queries = useQueries({
+    queries: cities.map((city) => ({
+      queryKey: ['todayWeather', city],
+      queryFn: () => getTodayWeather(city),
+      enabled: !!city,
+    })),
+  });
+
+  return queries;
 };
