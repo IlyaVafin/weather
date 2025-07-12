@@ -8,8 +8,8 @@ interface ISearchCityContext {
 
 export const CityContext = createContext<ISearchCityContext | undefined>(undefined);
 
-export const CityProvider = ({ children }: { children: ReactNode }) => {
-  const [city, setCity] = useState('Moscow');
+export const CityProvider = ({ children, initialCity }: { children: ReactNode, initialCity: string }) => {
+  const [city, setCity] = useState(initialCity);
   const searchCity = useCallback((newCity: string) => {
     setCity(newCity);
   }, []);

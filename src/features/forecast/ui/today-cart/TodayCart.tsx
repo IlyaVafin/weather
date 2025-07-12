@@ -1,12 +1,12 @@
+import { useCityContext } from '@/shared/hooks/useCityContext';
+import { useGetTodayWeather } from '@/shared/hooks/useGetTodayWeather';
 import Image from 'next/image';
-import { getWeekDay } from '../../model/getWeekDay';
 import { useGetTime } from '../../../../shared/hooks/useGetTime';
-import s from './TodayCart.module.css';
+import { useGetWeather } from '../../../../shared/hooks/useGetWeather';
+import { getWeekDay } from '../../model/getWeekDay';
 import { MainDetails } from './MainDetails';
 import { SunriseSunset } from './SunriseSunset';
-import { getWeather } from '../../model/getWeather';
-import { useGetTodayWeather } from '@/shared/hooks/useGetTodayWeather';
-import { useCityContext } from '@/shared/hooks/useCityContext';
+import s from './TodayCart.module.css';
 export default function TodayCart() {
   const { hours, minutes, currentTime } = useGetTime();
   const { city } = useCityContext();
@@ -14,7 +14,7 @@ export default function TodayCart() {
   if (!data) return <div>Loading...</div>;
   if (!data.main) return <p>City not found</p>;
 
-  const weather = getWeather(data.weather[0].main);
+  const weather = useGetWeather(data.weather[0].main);
   return (
     <section className={s.forecast}>  
       <div className={s.todayWeatherCard}>

@@ -14,6 +14,8 @@ const montserrat = Montserrat({
   subsets: ['latin']
 })
 
+const defaultCity = 'Moscow'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={montserrat.className}>
       <ClientProvider>
         <ThemeProvider>
-          <CityProvider>
+          <CityProvider initialCity={defaultCity}>
             <body>
               <div className="content-bg">{children}</div>
             </body>

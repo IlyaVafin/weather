@@ -1,4 +1,4 @@
-import { HeaderButton } from '@/shared/ui/HeaderButton';
+import { HeaderButton } from '@/widgets/header/ui/header-button/HeaderButton';
 import Image from 'next/image';
 import s from './Header.module.css';
 import { Input } from '@/features/search-city/ui/Input';

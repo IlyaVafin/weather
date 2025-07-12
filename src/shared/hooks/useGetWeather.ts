@@ -1,4 +1,4 @@
-export const getWeather = (weather: string) => {
+export const useGetWeather = (weather: string) => {
   return weather === 'Clouds'
     ? '/cloudy.svg'
     : weather === 'Rain'

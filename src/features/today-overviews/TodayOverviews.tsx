@@ -3,6 +3,7 @@ import { useCityContext } from '@/shared/hooks/useCityContext';
 import { useGetTodayWeather } from '@/shared/hooks/useGetTodayWeather';
 import { TodayOverviewsHeader } from './ui/today-header/TodayOverviewsHeader';
 import { ExploreWind } from './ui/explore-wind/ExploreWind';
+import { OtherCities } from '../other-cities/OtherCities';
 
 export const TodayOverviews = () => {
   const { city } = useCityContext();
@@ -10,9 +11,10 @@ export const TodayOverviews = () => {
   return (
     <>
       <TodayOverviewsHeader />
-      <div className="" style={{display: 'flex'}}>
+      <div style={{display:'flex', gap: '37px'}}>
         {data  && <Cards data={data} />}
         <ExploreWind/>
+        <OtherCities/>
         </div>
     </>
   );
