@@ -8,15 +8,15 @@ export const Pressure = memo(({ data }: { data: ITodayWeather }) => {
     return [
       {
         name: 'currentPressure',
-        value: data.main.pressure,
+        value: data?.main?.pressure,
       },
       {
         name: 'Remaining',
-        value: maxPressure - data.main.pressure,
+        value: maxPressure - data?.main?.pressure,
         fill: '#BAD4EB',
       },
     ];
-  }, [data.main.pressure]);
+  }, [data?.main?.pressure]) ?? 0;
   return (
     <div className={s.overviewCard}>
       <p>Pressure</p>

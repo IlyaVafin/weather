@@ -7,15 +7,17 @@ import { OtherCities } from '../other-cities/OtherCities';
 
 export const TodayOverviews = () => {
   const { city } = useCityContext();
-  const { data } = useGetTodayWeather(city);
+  const { data, isError, isLoading } = useGetTodayWeather(city);
+  if (isError) return <p>City not found</p>;
+  if (isLoading) return <p>Loading...</p>;
   return (
     <>
       <TodayOverviewsHeader />
-      <div style={{display:'flex', gap: '37px'}}>
-        {data  && <Cards data={data} />}
-        <ExploreWind/>
-        <OtherCities/>
-        </div>
+      <div style={{ display: 'flex', gap: '37px' }}>
+        {data ? <Cards data={data} /> : <div>lol</div>}
+        <ExploreWind />
+        <OtherCities />
+      </div>
     </>
   );
 };

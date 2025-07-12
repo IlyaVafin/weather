@@ -6,7 +6,7 @@ import { generateWaveBars } from '../../model/generateWaveBars';
 import s from './Cards.module.css';
 export const WindStatus = memo(({ data }: { data: ITodayWeather }) => {
 
-  const speed = data.wind.speed;
+  const speed =data?.wind?.speed ?? 0;
   const windSpeed = useMemo(() => {
     return generateWaveBars(speed);
   }, [speed]);

@@ -7,24 +7,27 @@ import TodayCart from '../today-cart/TodayCart';
 import s from './WeekForecast.module.css';
 export const WeekForcast = () => {
   const { city } = useCityContext();
-  const { data } = useGetWeekForecast(city);  
-
+  const { data, isLoading, isError } = useGetWeekForecast(city);
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>City not found</p>;
   if (!data) return;
-  const dailyForecast = data.list.filter((item) => {
-    return item.dt_txt.includes('12:00:00');
-  });
+  const dailyForecast =
+    data?.list?.filter((item) => {
+      return item.dt_txt.includes('12:00:00');
+    }) ?? 0;
   return (
     <section className={s.WeekForcast}>
       <TodayCart />
       <div>
         <ul className={s.weatherList}>
-          {dailyForecast.slice(1).map((item) => (
-            <li key={item.dt_txt}>
-              <p className={s.weatherListDay}>{getWeekDay(undefined, item.dt)}</p>
-              <Image width={50} height={50} src={useGetWeather(item.weather[0].main)} alt="" />
-              <p className={s.weatherListTemp}>{Math.floor(item.main.temp)}°</p>
-            </li>
-          ))}
+          { !!dailyForecast &&
+            dailyForecast.slice(1).map((item) => (
+              <li key={item.dt_txt}>
+                <p className={s.weatherListDay}>{getWeekDay(undefined, item.dt)}</p>
+                <Image width={50} height={50} src={useGetWeather(item.weather[0].main)} alt="" />
+                <p className={s.weatherListTemp}>{Math.floor(item.main.temp)}°</p>
+              </li>
+            ))}
         </ul>
       </div>
     </section>
